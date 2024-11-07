@@ -47,8 +47,9 @@ self.addEventListener('fetch', event => {
           self.clients.matchAll().then(clients => {
             clients.forEach(client => {
               client.postMessage('Connected to desired WLAN');
-            });
-        })
+		  })
+		  });
+        });
     );
   } else {
 	//standard behavior: first fetch or get cached version
