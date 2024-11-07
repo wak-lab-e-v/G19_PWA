@@ -30,7 +30,7 @@ self.addEventListener('fetch', event => {
 });
 
 self.addEventListener('fetch', event => {
-  const wlanTestUrl = '/test_fetch';
+  const wlanTestUrl = 'https://localhost:3000/test_fetch';
 
   if (event.request.url === wlanTestUrl) {
     event.respondWith(
