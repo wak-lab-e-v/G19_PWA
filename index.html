@@ -47,7 +47,7 @@
 
     <script>
         function activateSummer() {
-            alert("Der Summer wurde aktiviert.");
+            test_fetch()//alert("Der Summer wurde aktiviert.");
         }
 
         function openDoor() {
@@ -57,11 +57,15 @@
         function closeDoor() {
             alert("Die Tür wird geschlossen.");
         }
+		function test_fetch() {
+            fetch('./test_fetch')
+			.then(console.log("ok"))
+			.catch(console.error("error"));
+        }
 		
 		navigator.serviceWorker.addEventListener('message', event => {
 			alert(event.data);
 		});
-}
     </script>
 
 </body>
