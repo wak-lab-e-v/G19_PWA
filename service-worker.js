@@ -28,3 +28,30 @@ self.addEventListener('fetch', event => {
         })
     );
 });
+
+self.addEventListener('fetch', event => {
+  const wlanTestUrl = '/test_fetch';
+
+  if (event.request.url === wlanTestUrl) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          if (response.ok) {
+            self.clients.matchAll().then(clients => {
+            clients.forEach(client => {
+              client.postMessage('Connected to desired WLAN');
+            });
+          }
+        })
+        .catch(() => {
+          self.clients.matchAll().then(clients => {
+            clients.forEach(client => {
+              client.postMessage('Connected to desired WLAN');
+            });
+        })
+    );
+  } else {
+	//standard behavior: first fetch or get cached version
+     event.respondWith(fetch(event.request).catch(() => caches.match(event.request)));
+  }
+});

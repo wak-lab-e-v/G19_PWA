@@ -57,6 +57,11 @@
         function closeDoor() {
             alert("Die Tür wird geschlossen.");
         }
+		
+		navigator.serviceWorker.addEventListener('message', event => {
+			alert(event.data);
+		});
+}
     </script>
 
 </body>
