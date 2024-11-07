@@ -44,29 +44,13 @@
         <button onclick="openDoor()">Tür öffnen</button>
         <button onclick="closeDoor()">Tür schließen</button>
     </div>
-
-    <script>
-        function activateSummer() {
-            test_fetch()//alert("Der Summer wurde aktiviert.");
-        }
-
-        function openDoor() {
-            alert("Die Tür wird geöffnet.");
-        }
-
-        function closeDoor() {
-            alert("Die Tür wird geschlossen.");
-        }
-		function test_fetch() {
-            fetch('/test_fetch')
-			.then(console.log("ok"))
-			.catch(console.error("error"));
-        }
-		
-		navigator.serviceWorker.addEventListener('message', event => {
-			alert(event.data);
-		});
-    </script>
+	<script>
+		// Überprüfen, ob wir auf der GitHub Pages-URL sind
+		if (window.location.origin === "https://wak-lab-e-v.github.io") {
+			// Weiterleiten zur neuen Domain
+			window.location.replace("https://localhost:3000/");
+		}
+	</script>
 
 </body>
 </html>
