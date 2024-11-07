@@ -1,32 +1,32 @@
 {
-  "name": "Meine PWA",
-  "short_name": "PWA",
+  "name": "WAK-Lab e.V.",
+  "short_name": "WAK-Lab",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/image/logo_192.png",
+      "src": "./image/logo_192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/image/logo_512.png",
+      "src": "./image/logo_512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
    "screenshots": [
     {
-      "src": "/screenshot/desktop-screenshot.png",
+      "src": "./screenshot/desktop-screenshot.png",
       "sizes": "600x600",
       "type": "image/png",
 	  "form_factor": "narrow",
       "description": "A screenshot of the app on desktop"
     },
 	{
-      "src": "/screenshot/mobile-screenshot.png",
+      "src": "./screenshot/mobile-screenshot.png",
       "sizes": "400x600",
       "type": "image/png",
 	  "form_factor": "wide",
