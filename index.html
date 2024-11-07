@@ -45,10 +45,13 @@
         <button onclick="closeDoor()">Tür schließen</button>
     </div>
 	<script>
-		// Überprüfen, ob wir auf der GitHub Pages-URL sind
-		if (window.location.origin === "https://wak-lab-e-v.github.io") {
+		if (window.matchMedia('(display-mode: standalone)').matches) {
+			if (window.location.origin === "https://wak-lab-e-v.github.io") {
 			// Weiterleiten zur neuen Domain
 			window.location.replace("https://192.168.178.43:3000/");
+			}
+		} else {
+		console.log('PWA ist nicht installiert und läuft im Browser.');
 		}
 	</script>
 
